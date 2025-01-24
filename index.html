@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page with AI Agent</title>
+    <title>DLS Cement and Construction</title>
     <style>
         body, html {
             margin: 0;
@@ -14,48 +14,26 @@
         }
         iframe {
             position: fixed;
-            top: 50px; /* Push down for Buy Now button space */
+            top: 0;
             left: 0;
             width: 100%;
-            height: calc(100% - 50px); /* Adjust height to exclude button */
+            height: 100%;
             border: none;
-        }
-        .buy-now-center {
-            position: fixed;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1001;
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            text-align: center;
-            text-decoration: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-        .buy-now-center:hover {
-            background-color: #218838;
         }
         /* AI Widget Position */
         #convai-widget {
             position: fixed;
-            bottom: 20px; /* Adjust distance from the bottom */
-            right: 20px;  /* Positioned on the right side */
-            z-index: 1000;
+            bottom: 20px; /* Distance from the bottom */
+            right: 20px;  /* Distance from the right side */
+            z-index: 1000; /* Ensures it's on top of other elements */
         }
     </style>
 </head>
 <body>
-    <!-- Full-page iframe -->
-    <iframe src="https://dlscandc.com/" title="DLS Cement and Construction Website"></iframe>
-    
-    <!-- Buy Now Button in Top Center -->
-    <a href="contact.html" class="buy-now-center">Buy Now</a>
+    <!-- Full-page iframe displaying the website -->
+    <iframe src="https://dlscandc.com/" title="DLS Cement and Construction"></iframe>
 
-    <!-- AI Agent Widget -->
+    <!-- ElevenLabs Conversational AI Widget -->
     <div id="convai-widget">
         <elevenlabs-convai agent-id="3TWcSCSWDEuVAyATbcDc"></elevenlabs-convai>
         <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
