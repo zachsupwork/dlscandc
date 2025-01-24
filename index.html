@@ -3,22 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iframe with Convai Widget</title>
+    <title>AdvancedAI - Embedded App</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
+            font-family: Arial, sans-serif;
         }
         iframe {
             width: 100%;
-            height: calc(100% - 100px); /* Adjust if needed for spacing */
+            height: calc(100% - 100px); /* Leaves room for top button and footer */
             border: none;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 10000;
+        }
+        .header button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        .header button:hover {
+            background-color: #45a049;
+        }
+        .black-frame {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background-color: black;
+            z-index: 10001;
         }
         .widget-container {
             position: fixed;
-            bottom: 0;
+            bottom: 40px; /* Above black frame */
             width: 100%;
             text-align: center;
             z-index: 9999;
@@ -26,7 +57,11 @@
     </style>
 </head>
 <body>
+    <div class="header">
+        <button onclick="window.location.href='https://checkout-1-tier.vercel.app/'">Order Now</button>
+    </div>
     <iframe src="https://dldaddy.vercel.app/" title="Embedded App"></iframe>
+    <div class="black-frame"></div>
     <div class="widget-container">
         <elevenlabs-convai agent-id="3TWcSCSWDEuVAyATbcDc"></elevenlabs-convai>
         <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
