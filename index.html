@@ -14,29 +14,23 @@
         }
         iframe {
             width: 100%;
-            height: calc(100% - 100px); /* Leaves room for top button and footer */
+            height: calc(100% - 40px); /* Leaves room for footer */
             border: none;
         }
-        .header {
+        .order-button {
             position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+            top: 10px;
+            left: 10px;
             z-index: 10000;
-        }
-        .header button {
             background-color: #4CAF50;
             color: white;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px;
             border-radius: 4px;
         }
-        .header button:hover {
+        .order-button:hover {
             background-color: #45a049;
         }
         .black-frame {
@@ -57,9 +51,7 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <button onclick="window.location.href='https://checkout-1-tier.vercel.app/'">Order Now</button>
-    </div>
+    <button class="order-button" onclick="window.location.href='https://checkout-1-tier.vercel.app/'">Order Now</button>
     <iframe src="https://dldaddy.vercel.app/" title="Embedded App"></iframe>
     <div class="black-frame"></div>
     <div class="widget-container">
